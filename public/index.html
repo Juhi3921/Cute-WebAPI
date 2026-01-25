@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Cute Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<nav class="nav">
+  <a class="nav-item active" data-page="home">🏠 Home</a>
+  <a class="nav-item" data-page="weather">🌤️ Weather</a>
+  <a class="nav-item" data-page="calendar">📅 Calendar</a>
+</nav>
+
+<section id="home-page" class="page-section active">
+  <h1 id="timeDisplay"></h1>
+  <p id="dateDisplay"></p>
+
+  <div class="quote-card">
+    <p id="quote">Loading…</p>
+    <span id="author"></span><br>
+    <button id="newQuoteBtn">✨ New Quote</button>
+  </div>
+
+  <div id="catBubble" class="cat-bubble">
+    💬 Hello! I’m your mood cat 😺
+  </div>
+
+  <img id="catImg" class="cat-img" />
+</section>
+
+<section id="weather-page" class="page-section">
+  <div class="weather-card">
+    <h1><span id="temperature"></span>°C</h1>
+    <p id="weatherDesc"></p>
+    <button id="refreshWeatherBtn">🔄 Refresh</button>
+  </div>
+</section>
+
+<section id="calendar-page" class="page-section">
+  <div class="calendar-header">
+    <button id="prevMonthBtn">◀</button>
+    <h2 id="monthYearDisplay"></h2>
+    <button id="nextMonthBtn">▶</button>
+  </div>
+  <div id="miniCalendar" class="calendar-grid"></div>
+</section>
+
+</body>
+</html>
