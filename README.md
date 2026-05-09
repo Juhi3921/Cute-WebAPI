@@ -47,10 +47,3 @@ Built with love using **HTML, CSS, JavaScript, Node.js, and Express**.
 - Weather API
 - The Cat API 🐱
 <img width="1365" height="670" alt="Purrfect Day SS" src="https://github.com/user-attachments/assets/e5d4a54b-d748-4d8d-b8a8-3a1ca2c2359d" />
-
-- Quotable API (with fallback)
-
----
-
-## 📂 Project Structure
-
