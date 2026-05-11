@@ -1,75 +1,54 @@
-# 🐾 Purrfect Day
+# Ideal Day
 
-A cute web dashboard that brings together weather updates, motivational quotes and a cat companion that reacts to the environment 🌤️🐱
+Cute Web Application that provides weather updates, inspirational quotes.
+use of HTML, CSS, JavaScript, Node.js, and Express.
+## ★ Features ★
 
-It was built with love using HTML, CSS, JavaScript, Node.js and Express.
+• Live Clock & Date - Is always live and up to date.
 
-## ✨ Features
+• Real Time Weather - Uses a real-time weather API for your area.
 
-- 🕒 Live Clock and Date
+The Virtual Pet Kitty will react based on the current temperature, i.e. hot or cold.
 
-- 🌤️ Real-time Weather
+• Inspirational Quotes - Get quotes through an API.
 
-It uses a Weather API and needs your location
+If there is an error in the API call, there are pre-defined default quotes.
 
-The cat reacts based on the temperature like when its warm or cold
+• Cute Virtual Pet Kitty Companion - Displays cute cat images using the Cat API.
 
-- 💬 Motivational Quotes
+If you click on the Virtual Pet Kitty, it makes a MEOW sound.🐾
 
-It gets quotes from an API
+A speech bubble will show the variables associated with the Virtual Pet Kitty Mood and also display text.
 
-If the API fails it has some fallback quotes
+• Automatic Dark Mode - Automatically switches to dark mode after 7 PM to have an enjoyable, cozy, and dark theme.
 
-- 🐱 Cute Cat Companion
+• Mini Calendar - You can navigate month to month and see what today is.
 
-It shows cat images using the Cat API
+• Soft Cute UI - Has smooth transitions. It has hover effects. The cards are rounded and use pastel colours.
 
-The cat meows when you click on it 🐾
 
-A speech bubble shows the cats mood and messages
-
-- 🌙 Automatic Night Mode
-
-It turns on after 7 PM for a cozy dark theme
-
-- 📅 Mini Calendar
-
-You can navigate through months
-
-It highlights the current day
-
-- 🎨 Soft and Cute UI
-
-It has smooth animations
-
-There are hover effects
-
-It uses rounded cards and pastel colors
-
-## 🛠️ Tech Stack
+## Technology Stack
 
 **Frontend**
 
-- HTML
+• HTML
 
-- CSS for animations and a responsive UI
+• CSS (animations + responsive UI).
 
-- JavaScript for changing things on the page
+• JavaScript (changes elements on the page).
 
 **Backend**
 
-- Node.js
+• Node.js
 
-- Express.js
+• Express.js
 
-- node-fetch
+• node-fetch
 
-- dotenv
+• dotenv
 
 **APIs Used**
 
-- Weather API
+• Weather API
 
-- The Cat API 🐱
-
-<img width="1365" height="670”, alt="Purrfect Day SS" src="https://github.com/user-attachments/assets/e5d4a54b-d748-4d8d-b8a8-3a1ca2c2359d" />
+• Cat API 
