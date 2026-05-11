@@ -1,5 +1,4 @@
 Cute Web Application that provides weather updates, inspirational quotes.
-use of HTML, CSS, JavaScript, Node.js, and Express.
 ## ★ Features ★
 
 • Live Clock & Date - Is always live and up to date.
