@@ -20,7 +20,7 @@ setInterval(updateTime, 1000); updateTime();
 /* QUOTE */
 async function fetchQuote() {
   try {
-    const res = await fetch("/api/quote");
+    const res = await fetch("https://purrfect-day.onrender.com/api/quote");
     const data = await res.json();
 
     document.getElementById("quote").textContent = `"${data.content}"`;
@@ -37,7 +37,7 @@ async function fetchQuote() {
 
 /* CAT */
 async function fetchCat() {
-  const r = await fetch("/api/cat");
+  const r = await fetch("https://purrfect-day.onrender.com/api/cat");
   const d = await r.json();
   catImg.src = d.url;
 }
@@ -58,7 +58,7 @@ document.getElementById("catImg").addEventListener("click", () => {
 /* WEATHER + CAT MOOD */
 async function fetchWeather() {
   navigator.geolocation.getCurrentPosition(async pos => {
-    const r = await fetch(`/api/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`);
+    const r = await fetch(`https://purrfect-day.onrender.com/api/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`);
     const d = await r.json();
     const t = d.current.temp_c;
 

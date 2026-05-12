@@ -1,19 +1,18 @@
 import express from "express";
 import dotenv from "dotenv";
 import fetch from "node-fetch";
+import cors from "cors"; 
 
-/* 🔐 Load env variables FIRST */
 dotenv.config({ quiet: true });
 
 const app = express();
 
-/* 🌍 Use PORT from env (Render needs this) */
+app.use(cors());
+
 const PORT = process.env.PORT || 3000;
 
-/* 📁 Serve frontend */
 app.use(express.static("public"));
 
-/* 💬 QUOTE API */
 app.get("/api/quote", async (req, res) => {
   try {
     const r = await fetch("https://api.quotable.io/random", { timeout: 5000 });
@@ -31,7 +30,6 @@ app.get("/api/quote", async (req, res) => {
   }
 });
 
-/* 🐱 CAT API */
 app.get("/api/cat", async (req, res) => {
   try {
     const r = await fetch(
@@ -42,28 +40,32 @@ app.get("/api/cat", async (req, res) => {
         }
       }
     );
+
     const data = await r.json();
     res.json(data[0]);
+
   } catch (err) {
     res.status(500).json({ error: "Cat unavailable 😿" });
   }
 });
 
-/* 🌤️ WEATHER API */
 app.get("/api/weather", async (req, res) => {
   try {
     const { lat, lon } = req.query;
+
     const r = await fetch(
       `https://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_API_KEY}&q=${lat},${lon}`
     );
+
     const data = await r.json();
     res.json(data);
+
   } catch {
     res.status(500).json({ error: "Sorry ....Weather unavailable 🌧️" });
   }
 });
 
-/* 🚀 START SERVER (LAST LINE ALWAYS) */
+
 app.listen(PORT, () => {
-  console.log(`✅ Server running → http://localhost:${PORT}`);
+  console.log(`Server running → http://localhost:${PORT}`);
 });
