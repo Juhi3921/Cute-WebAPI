@@ -29,7 +29,7 @@ async function fetchQuote() {
   } catch (err) {
     document.getElementById("quote").textContent =
       "“Stay positive, even offline 🌸”";
-    document.getElementById("author").textContent = "— Your Cat 🐱";
+    document.getElementById("author").textContent = "— Your Cutie Cat🐱";
     updateBubble("Internet shaky… but I’m still here 🐾");
   }
 }

@@ -59,7 +59,7 @@ app.get("/api/weather", async (req, res) => {
     const data = await r.json();
     res.json(data);
   } catch {
-    res.status(500).json({ error: "Weather unavailable 🌧️" });
+    res.status(500).json({ error: "Sorry ....Weather unavailable 🌧️" });
   }
 });
 

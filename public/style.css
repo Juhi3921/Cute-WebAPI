@@ -194,7 +194,7 @@ body.night .nav-item.active {
 body.night .quote-card,
 body.night .weather-card {
   background: #2a2a3a;
-  color: #f0f0f0;
+  color: white;
 }
 
 body.night .cat-bubble {
