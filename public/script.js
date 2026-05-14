@@ -102,7 +102,7 @@ async function fetchQuote() {
 
     const response =
       await fetch(
-        "http://localhost:3000/api/quote"
+        "/api/quote"
       );
 
     const quoteData =
@@ -138,7 +138,7 @@ async function fetchCat() {
 
     const response =
       await fetch(
-        "http://localhost:3000/api/cat"
+        "/api/cat"
       );
 
     const catData =
@@ -197,7 +197,7 @@ async function fetchWeather() {
 
           const response =
             await fetch(
-              `http://localhost:3000/api/weather?lat=${latitude}&lon=${longitude}`
+              `/api/weather?lat=${latitude}&lon=${longitude}`
             );
 
           const weatherData =

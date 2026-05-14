@@ -18,6 +18,21 @@ app.use(express.static("public"));
 
 app.use(express.json());
 
+
+// -------------------------
+// HOME ROUTE
+// -------------------------
+
+app.get("/", (req, res) => {
+
+  res.sendFile(
+    "index.html",
+    {
+      root: "./public"
+    }
+  );
+});
+
 const PORT = process.env.PORT || 3000;
 
 
