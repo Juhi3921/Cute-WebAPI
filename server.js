@@ -2,10 +2,23 @@ import express from "express";
 import dotenv from "dotenv";
 import fetch from "node-fetch";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 
 const app = express();
+
+
+// -------------------------
+// PATH CONFIG
+// -------------------------
+
+const __filename =
+  fileURLToPath(import.meta.url);
+
+const __dirname =
+  path.dirname(__filename);
 
 
 // -------------------------
@@ -14,7 +27,14 @@ const app = express();
 
 app.use(cors());
 
-app.use(express.static("public"));
+app.use(
+  express.static(
+    path.join(
+      __dirname,
+      "public"
+    )
+  )
+);
 
 app.use(express.json());
 
@@ -26,14 +46,16 @@ app.use(express.json());
 app.get("/", (req, res) => {
 
   res.sendFile(
-    "index.html",
-    {
-      root: "./public"
-    }
+    path.join(
+      __dirname,
+      "public",
+      "index.html"
+    )
   );
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT =
+  process.env.PORT || 3000;
 
 
 // -------------------------
