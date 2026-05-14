@@ -1,53 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>My Cute Dashboard</title>
+
   <link rel="stylesheet" href="style.css" />
+
   <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<nav class="nav">
-  <a class="nav-item active" data-page="home">🏠 Home</a>
-  <a class="nav-item" data-page="weather">🌤️ Weather</a>
-  <a class="nav-item" data-page="calendar">📅 Calendar</a>
-</nav>
 
-<section id="home-page" class="page-section active">
-  <h1 id="timeDisplay"></h1>
-  <p id="dateDisplay"></p>
 
-  <div class="quote-card">
-    <p id="quote">Loading…</p>
-    <span id="author"></span><br>
-    <button id="newQuoteBtn">✨ New Quote</button>
+  <div class="container">
+
+
+    
+    <nav class="nav">
+
+      <a
+        class="nav-item active"
+        data-page="home"
+      >
+        Home
+      </a>
+
+      <a
+        class="nav-item"
+        data-page="weather"
+      >
+        Weather
+      </a>
+
+      <a
+        class="nav-item"
+        data-page="calendar"
+      >
+        Calendar
+      </a>
+
+    </nav>
+
+
+    <section
+      id="home-page"
+      class="page-section active"
+    >
+
+      <!-- greeting -->
+      <h2 id="greetingText"></h2>
+
+
+      <!-- time -->
+      <h1 id="timeDisplay"></h1>
+
+      <p id="dateDisplay"></p>
+
+
+      <!-- top action buttons -->
+      <div class="top-actions">
+
+        <button id="musicBtn">
+           Play Music
+        </button>
+
+        <button id="themeBtn">
+          Theme
+        </button>
+
+      </div>
+
+
+      <div class="quote-card">
+
+        <p id="quote">
+          Loading...
+        </p>
+
+        <span id="author"></span>
+
+        <button id="newQuoteBtn">
+          New Quote
+        </button>
+
+      </div>
+
+
+      <div
+        id="catBubble"
+        class="cat-bubble"
+      >
+        Hello! I’m your mood cat 
+      </div>
+
+
+      <img
+        id="catImg"
+        class="cat-img"
+      />
+
+
+      <div class="focus-card">
+
+        <h2>
+          Focus Timer 
+        </h2>
+
+        <input
+          type="number"
+          id="focusMinutes"
+          placeholder="Enter minutes"
+          value="25"
+          min="1"
+        />
+
+        <h1 id="focusTime">
+          25:00
+        </h1>
+
+        <div class="timer-buttons">
+
+          <button id="startTimerBtn">
+            Start
+          </button>
+
+          <button id="resetTimerBtn">
+            Reset
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="notes-card">
+
+        <h2>
+          Daily Notes 
+        </h2>
+
+        <textarea
+          id="notesInput"
+          placeholder="Write your thoughts here..."
+        ></textarea>
+
+      </div>
+      </div>
+
+    </section>
+
+
+    <section
+      id="weather-page"
+      class="page-section"
+    >
+
+      <div class="weather-card">
+
+        <h1>
+          <span id="temperature"></span>°C
+        </h1>
+
+        <p id="weatherDesc"></p>
+
+        <button id="refreshWeatherBtn">
+          Refresh Weather
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <section
+      id="calendar-page"
+      class="page-section"
+    >
+
+      <div class="calendar-card">
+
+        <div class="calendar-header">
+
+          <button id="prevMonthBtn">
+            ◀
+          </button>
+
+          <h2 id="monthYearDisplay"></h2>
+
+          <button id="nextMonthBtn">
+            ▶
+          </button>
+
+        </div>
+
+        <div
+          id="miniCalendar"
+          class="calendar-grid"
+        ></div>
+
+      </div>
+
+    </section>
+
   </div>
 
-  <div id="catBubble" class="cat-bubble">
-    💬 Hello! I’m your mood cat 😺
-  </div>
 
-  <img id="catImg" class="cat-img" />
-</section>
 
-<section id="weather-page" class="page-section">
-  <div class="weather-card">
-    <h1><span id="temperature"></span>°C</h1>
-    <p id="weatherDesc"></p>
-    <button id="refreshWeatherBtn">🔄 Refresh</button>
-  </div>
-</section>
 
-<section id="calendar-page" class="page-section">
-  <div class="calendar-header">
-    <button id="prevMonthBtn">◀</button>
-    <h2 id="monthYearDisplay"></h2>
-    <button id="nextMonthBtn">▶</button>
-  </div>
-  <div id="miniCalendar" class="calendar-grid"></div>
-</section>
+  <audio id="bgMusic" loop>
+
+    
+    <source
+      src="gatos_cats.mp3"
+      type="audio/mp3"
+    />
+
+  </audio>
 
 </body>
+
 </html>
