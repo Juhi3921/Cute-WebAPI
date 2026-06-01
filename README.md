@@ -1,6 +1,6 @@
 Cute Web Application that provides weather updates, inspirational quotes.
 ## Features 
-• Live Clock & Date • Real Time Weather update • Inspirational Quotes • Mini Calendar  • Themes- Dark, Light Mode 
+• Live Clock & Date • Real Time Weather update • Inspirational Quotes • Mini Calendar  • Themes- Dark and Light Mode 
 
 ## Technology Stack
 **Frontend**
